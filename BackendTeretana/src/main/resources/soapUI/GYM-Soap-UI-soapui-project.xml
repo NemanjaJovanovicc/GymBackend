@@ -1,0 +1,3585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e7a378f1-2a79-4582-b321-2339704f86ae" activeEnvironment="Default" name="GYM Soap UI" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="0b1cc265-8ab8-4113-b316-0407113b3c1c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8083" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8083</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Coach Get All" path="/coach" id="a7b0be43-2d80-4a80-8e42-72c355bfede0">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Get All" id="fb9ff095-308f-4efb-9e9a-0483d0b85690" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get All" id="97206076-c76d-4485-8b33-1b640e6b4d56" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/coach</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Coach Get One By Id" path="/coach/{id}" id="b4d570fe-1d10-4971-9553-3fbbc68f3d91">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get One By Id" id="d5a1dd40-1d8d-42cc-8d87-39389dd19f40" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/coach/1">ns:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/coach/1">ns:Fault</con:element>
+        </con:representation>
+        <con:request name="Get One By Id" id="85fec0fd-84a8-46f3-b752-28eff838d575" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/coach/1</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Coach Get By Name" path="/coachName/{name}" id="10dcb252-4373-4da0-b958-0474051d4af3">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>name</con:name>
+          <con:value>name</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>name</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get By Name" id="5ca54587-3bf5-4d3e-9349-926db9f281ed" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get By Name" id="eec7e1cf-d3b8-432d-bafa-0a129cf8c324" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/coachName/ne</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="name" value="ne" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Coach Insert" path="coach" id="b19f99c0-bc47-4b8b-b5f7-09695ae0eb5b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Insert" id="7baa483c-7daf-4bf4-90c3-1739ae13b732" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400 500</con:status>
+          <con:params/>
+          <con:element xmlns:coac="http://localhost/coach">coac:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Insert" id="b5223a77-238b-4479-9037-1c7ec0f22d2e" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+"id": -101,
+"adress": "Insert",
+"contact": "063-213761",
+"jmbg": "8777321070211",
+"name": "Insert",
+"surname": "Insert"
+}</con:request>
+          <con:originalUri>http://localhost/coach</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Coach Update" path="/coach" id="fd9350a1-33e2-4f62-91f5-182e7ea06173">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Update" id="63fd9ce1-2e59-48fc-b5a2-0d3afd52b52d" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:coac="http://localhost/coach">coac:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Update" id="741cdf34-4ebc-4873-91b1-99514de5b5a7" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+      "id": -100,
+      "adress": "Upadte",
+      "contact": "Up",
+      "jmbg": "UP",
+      "name": "Update",
+      "surname": "Update"
+   }</con:request>
+          <con:originalUri>http://localhost/coach</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Coach Delete" path="/coach/{id}" id="8060fc6f-ed85-4f28-a69c-8b10b4b3eefd">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Delete" id="923bdc66-c7d3-4947-9168-8c57d6c8e3da" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Delete" id="6e97acb5-6b81-4bd5-a43f-fb4dae58a236" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/coach/-100</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="WorkoutType Get All" path="/workoutType" id="a7c48d1d-9af1-4845-b270-268505828a0b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Get All" id="8b0bfdb9-b745-42c4-a04c-14de2ac318ca" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get All" id="6ec4a4f1-e23f-45a5-9a0f-59b95d3469b7" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/workoutType</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="WorkoutType Get One By Id" path="/workoutType/{id}" id="a156189a-6277-4372-ab06-f7e6b802a775">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get One By Id" id="a53dc404-251a-45b6-89da-bb6ccb5dc593" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/workoutType/3">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Get One By Id" id="214b8237-eefe-4614-b39c-739ac071227e" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/workoutType/3</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="3" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Workout Get By Title" path="/workoutTypeTitle/{title}" id="b6dbf7ad-7656-4d4f-8ff6-826215914538">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>title</con:name>
+          <con:value>title</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>title</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get By Title" id="2799936a-eec0-4513-ba2e-8eaf581016aa" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get By Title" id="88a343c5-2c41-4353-8e16-57c324d4e105" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/workoutTypeTitle/dz</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="title" value="dz" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="WorkoutType Insert" path="/workoutType" id="e7181b45-346a-4de3-9278-eee0aae9388b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Insert" id="27135f0c-9d63-46da-af54-b010c97e38ff" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:wor="http://localhost/workoutType">wor:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Insert" id="9b15a61c-1336-456a-b95d-d2d49e8ba5d6" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -101,
+   "title": "dzudo INSERT"
+}</con:request>
+          <con:originalUri>http://localhost/workoutType</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="WorkoutType Update" path="/workoutType" id="dac28348-dc8d-4c3d-ae46-0654e4a97617">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Update" id="fbfd28e3-df2c-4631-94e5-890cdf8c6240" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:wor="http://localhost/workoutType">wor:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Update" id="153f085e-4eaa-4d5a-b885-549c8d2a5ec3" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -100,
+   "title": "UPDATE"
+}</con:request>
+          <con:originalUri>http://localhost/workoutType</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="WorkoutType Delete" path="/workoutType/{id}" id="33641de5-c158-40f1-8399-ec41dc16bf4c">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Delete" id="cd151cbe-ecfa-412e-8db1-0e46c3cb4acc" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:id="http://localhost/workoutType/id">id:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Delete" id="ec34ac07-ad8d-49d2-b8ed-22aa0c42c990" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/workoutType/id</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Payment Get All" path="/payment" id="6c08f30f-fdee-4da0-8c66-03958bf24c40">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Get All" id="d5c4cd88-9020-4bea-9562-eac4ecc76b46" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get All" id="490aa5f5-6c05-4f14-ae80-56fc11d0b60a" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/payment</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Payment Get One By Id" path="/payment/{id}" id="dac15a40-0ec3-405f-a461-b650b03f91e0">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get One By Id" id="39826a88-a66a-4f37-9442-b56bc6f3bf42" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/payment/4">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Get One By Id" id="5ce5f409-701a-4dcf-b143-fc1b1beea5f0" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/payment/4</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="4" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Payment Get By Amount" path="/paymentAmount/{amount}" id="1374cf0a-f13a-4861-b39d-5d4d342ab8d7">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>amount</con:name>
+          <con:value>amount</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>amount</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get By Amount" id="416426a1-98de-428a-95e6-33bce12dd5c6" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get By Amount" id="5605a0de-639d-4887-a236-63a8cb94a7f6" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/paymentAmount/3</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="amount" value="3" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Payment Insert" path="/payment" id="7aca1214-e002-431e-92ec-645f9a0590e3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Insert" id="4cd3e070-eab3-4136-88a0-62fbec820bdf" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:pay="http://localhost/payment">pay:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Insert" id="f230b05b-d0b9-4051-a996-e0b8529bbd8b" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -101,
+   "amount": ".... dinara INSERT",
+   "paymentdate": "datum INSERT"
+}</con:request>
+          <con:originalUri>http://localhost/payment</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Payment Update" path="/payment" id="f63b3fa5-4c7e-4eef-bee4-1bed0487d1ad">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Update" id="1f998708-cebe-4959-940f-b458a5820cf0" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Update" id="86ce1b0a-5ddf-41a8-8a28-5523f5ed06aa" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -100,
+   "amount": "dinara UPDATE",
+   "paymentdate": "datum UPDATE"
+}</con:request>
+          <con:originalUri>http://localhost/payment</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Payment Delete" path="/payment/{id}" id="e281ae27-5b48-4f65-b6ed-0245a54a371e">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Delete" id="3c097068-0cc9-4ab9-929e-48d7ea6a4861" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400 500</con:status>
+          <con:params/>
+          <con:element xmlns:id="http://localhost/payment/id">id:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Delete" id="78817827-4874-4a68-b917-4d850d58ece3" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/payment/id</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Employee Get All" path="/employee" id="c5d35064-adbe-4b22-bd8f-5cd1c6c688f3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Get All" id="3fb465bc-8116-4bde-8b7c-feb385204ca0" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get All" id="09f89e1b-982b-46bf-bf68-f31c0fc51e3d" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/employee</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Employee Get One By Id" path="/employee/{id}" id="e2967191-b3b2-4e9a-8e29-505228ad5634">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get One By Id" id="087cdb60-a201-475b-860a-a8c486276d3f" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/employee/3">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Get One By Id" id="f77187d4-35b5-43ac-92e6-571650fa5c84" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/employee/3</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="3" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Employee Get By Name" path="/employeeName/{name}" id="acfb7e76-f84d-404f-8312-aca2224595ad">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>name</con:name>
+          <con:value>name</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>name</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get By Name" id="93434763-e27c-46cc-8978-2444446cf376" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get By Name" id="5e1fce48-fa4b-4285-8f10-53874d7c5114" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/employeeName/Darko</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="name" value="Darko" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Employee Insert" path="/employee" id="f6b08f4c-52f5-49cc-9c5b-4935dd3f5e64">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Insert" id="48acf475-f762-4586-b41b-68868e50473d" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:emp="http://localhost/employee">emp:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Insert" id="438dcf63-f6e5-4bb1-991a-0fb1fa83694c" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -101,
+   "contact": "INSERT",
+   "name": "Darko Insert",
+   "password": "darecare Insert",
+   "surname": "Mitorvic Inserrt",
+   "username": "dare.mitrovic INSERT"
+}</con:request>
+          <con:originalUri>http://localhost/employee</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Employee Update" path="/employee" id="6d21e22a-e0dd-4a89-be7e-62c0bfcc2664">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Update" id="ea00c077-0bf8-49ee-99c2-0d4bc350a6a7" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Update" id="a9a6b6a9-a0c0-4055-9b6c-8137d25361a9" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -100,
+   "contact": "con UPDATE",
+   "name": "na UPDATE",
+   "password": "pass UPDATE",
+   "surname": "sur UPDATE",
+   "username": "usr UPDATE"
+}</con:request>
+          <con:originalUri>http://localhost/employee</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Employee Delete" path="/employee/{id}" id="a0949643-0ba4-4107-adfd-720f7102edd1">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Delete" id="349415b8-25e8-40ee-b581-32e4728f1f59" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/employee/-100">ns:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Delete" id="842b4365-0d46-4673-9bd0-71e60eda4168" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/employee/-100</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CardCategory Get All" path="/cardCategory" id="b67e7e88-ed59-4d57-80dc-bbbe1ad0b8bd">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Get All" id="87c03d01-a746-4508-991a-6b0ee7c1530d" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get All" id="82457823-c523-45af-949a-7cd6e95980e4" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/cardCategory</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CareCategory Get One By Id" path="/cardCategory/{id}" id="5c8aa2ca-70d4-46c9-bf04-af0dbd5f43c1">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get One By Id" id="f1f4c135-986a-4705-958a-8be74f4a505c" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/cardCategory/101">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Get One By Id" id="2d326e40-0c14-4ce9-ad1a-3dc0535ec094" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/cardCategory/101</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="101" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CardCategory Get By Name" path="/cardCategoryName/{name}" id="f133df67-9af8-4e5a-ab5f-cc976264fe0a">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>name</con:name>
+          <con:value>name</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>name</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get By Name" id="f657bece-cff3-4469-bb4e-578dd205bdbf" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get By Name" id="777c3ea2-9e0d-4a87-9343-657c1b51246f" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/cardCategoryName/pr</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="name" value="pr" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CardCategory Insert" path="/cardCategory" id="69f71850-477e-49f4-a919-3bd4a0cfb95d">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Insert" id="59735244-305f-40ea-b02a-f141a7e6efa0" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:loc="http://localhost/">loc:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Insert" id="bb2b5d5c-a9f4-412b-b0ef-42f0057306a7" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -101,
+   "description": "desc INSERT",
+   "mark": "m INSERT",
+   "name": "naem INSERT"
+}</con:request>
+          <con:originalUri>http://localhost/</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CardCategory Update" path="/cardCategory" id="d59b6d86-bd59-4914-ac03-4d8ec850fba8">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Update" id="f91251a4-6f0e-4b52-b488-0f4506ffbff7" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:car="http://localhost/cardCategory">car:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Update" id="cd2a723f-0e2c-42e4-89a8-a17a1a3d90fd" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -100,
+   "description": "description UPDATE",
+   "mark": "mark UPDATE",
+   "name": "name UPDATE"
+}</con:request>
+          <con:originalUri>http://localhost/cardCategory</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CardCategory Delete" path="/cardCategory/{id}" id="1c66ff3f-2bf4-41d5-944a-e646f5514bad">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>-100</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>-100</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Delete" id="d2f320ae-4663-4ff4-94cd-6cc976bf54df" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>405 500</con:status>
+          <con:params/>
+          <con:element xmlns:car="http://localhost/cardCategory">car:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Delete" id="806c54f6-d3c3-40b5-8152-232cf444cd9a" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/cardCategory</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Member Get All" path="/member" id="c32c4fdf-eb4b-423b-a4c1-d865e4b2675e">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Get All" id="6c046112-4f52-4ac0-a095-ed0c38f49c46" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get All" id="11e20377-e5d6-4b7d-9224-69fb371d0d76" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/member</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Member Get One By Id" path="/member/{id}" id="352e3b5c-8836-4932-9ba4-c2f50fdef95c">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get One By Id" id="ff5a51b7-714e-412a-8652-3e3d9575d1ab" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/member/351">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Get One By Id" id="9dfa4b80-6f83-4c7d-9396-2ad8d9505039" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/member/351</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="351" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Member Get By Name" path="/memberName/{name}" id="c7ae1301-b845-4642-a5ea-175f1eeec096">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>name</con:name>
+          <con:value>name</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>name</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get By Name" id="b4db1775-65c6-4967-899a-7d1e2cb8398a" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get By Name" id="a237229c-f118-4bce-9189-5ddb29ad853a" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/memberName/Danilo</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="name" value="Danilo" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Member Insert" path="/member" id="44b6f291-8f0f-444d-99b5-4eebeb7c0557">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Insert" id="50e8d697-c978-4a9b-bf22-0cfc5ec01e54" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:mem="http://localhost/member">mem:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Insert" id="66ebdb1e-287b-4c3b-a1e4-08f86da87d4e" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -101,
+   "adress": "add INSERT",
+   "contact": "con INSERT",
+   "jmbg": "jmbg INSERT",
+   "name": "name INSERT",
+   "status": "status INSERT",
+   "surname": "surname INSERT",
+   "cardCategory":    {
+      "id": 1,
+      "description": "12 termina mesecno",
+      "mark": "B",
+      "name": "basic"
+   },
+   "payment":    {
+      "id": 101,
+      "amount": "1800 dinara",
+      "paymentdate": "01.02.2021"
+   }
+}</con:request>
+          <con:originalUri>http://localhost/member</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Member Update" path="/member" id="c13c45ed-95e4-41f8-8e0a-e2fbcd204a01">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Update" id="df00d1e8-bf11-4485-83b2-78c7d1a7b31d" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:mem="http://localhost/member">mem:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Update" id="ec24d618-047e-411f-beb9-7581dbe82358" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -100,
+   "adress": "add update",
+   "contact": "con update",
+   "jmbg": "jmbg update",
+   "name": "name update",
+   "status": "status update",
+   "surname": "sur update",
+   "cardCategory":    {
+      "id": 1,
+      "description": "12 termina mesecno",
+      "mark": "B",
+      "name": "basic"
+   },
+   "payment":    {
+      "id": 101,
+      "amount": "1800 dinara",
+      "paymentdate": "01.02.2021"
+   }
+}</con:request>
+          <con:originalUri>http://localhost/member</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Member Delete" path="/member/{id}" id="cac38758-747f-4276-877a-f5b9f7e2ab3c">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Delete" id="10c9806a-fe92-43ff-a06d-d41ea6933ac3" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/member/-100">ns:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Delete" id="3ee31d4e-312b-47e7-be78-c08af8761157" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/member/-100</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="GymCard Get All" path="/gymCard" id="0801cb17-98bc-4726-9617-5d1753dff136">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Get All" id="efb1bc78-7f1d-4af9-936a-9bf274c72d48" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get All" id="a43ebce2-667e-4f6d-86a7-59dc8ae4ebe9" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/gymCard</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="GymCard Get One By Id" path="/gymCard/{id}" id="0006de52-87a7-4824-a278-7766f52190e9">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get One By Id" id="45676592-548f-405e-abeb-4d1ca391e516" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/gymCard/451">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Get One By Id" id="b7960aec-381e-4c6d-871d-b4195b4b9a1c" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/gymCard/451</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="451" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="GymCard Get By CardDuration" path="/gymCardDuration/{cardduration}" id="eb4be917-19be-44f3-8b94-7087d150c46c">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>cardduration</con:name>
+          <con:value>cardduration</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>cardduration</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get By CardDuration" id="e1cecf64-9352-4ad0-b5ca-0ca7ebc70d66" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get By CardDuration" id="1b3b702f-b8de-4937-bb8f-3c9248699033" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/gymCardDuration/mes</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="cardduration" value="mes" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="GymCard Insert" path="/gymCard" id="081f7c1f-0a82-4c1a-92a1-a2a7a53fad26">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Insert" id="b65cf4a6-24ac-4ae3-9943-8390c15e78bf" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:gym="http://localhost/gymCard">gym:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Insert" id="e260eafe-f1ee-4022-8a3c-04bc9078d382" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -101,
+   "cardduration": "card INSERT",
+   "employee":    {
+      "id": 401,
+      "contact": "065-9874322",
+      "name": "Dunja",
+      "password": "dunja123",
+      "surname": "Lukic",
+      "username": "dunja77lukic"
+   },
+   "member":    {
+      "id": 651,
+      "adress": "Kosovska 23",
+      "contact": "063-1231232",
+      "jmbg": "3291863981234",
+      "name": "Dragana",
+      "status": "penzioner",
+      "surname": "Eric",
+      "cardCategory":       {
+         "id": 101,
+         "description": "31 termin mesecno",
+         "mark": "P",
+         "name": "premium"
+      },
+      "payment":       {
+         "id": 51,
+         "amount": "2000 dinara",
+         "paymentdate": "10.02.2021"
+      }
+   }
+}</con:request>
+          <con:originalUri>http://localhost/gymCard</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="GymCard Update" path="/gymCard" id="36d99d06-498f-4d45-a9c3-08f413f07f55">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Update" id="cdfa9c3a-b1c9-4ee4-8934-e1d1049e4827" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:gym="http://localhost/gymCard">gym:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Upadte" id="7b6aa4b7-4113-426c-9c4a-564838f902e9" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -100,
+   "cardduration": "card UPDATE",
+   "employee":    {
+      "id": 401,
+      "contact": "065-9874322",
+      "name": "Dunja",
+      "password": "dunja123",
+      "surname": "Lukic",
+      "username": "dunja77lukic"
+   },
+   "member":    {
+      "id": 651,
+      "adress": "Kosovska 23",
+      "contact": "063-1231232",
+      "jmbg": "3291863981234",
+      "name": "Dragana",
+      "status": "penzioner",
+      "surname": "Eric",
+      "cardCategory":       {
+         "id": 101,
+         "description": "31 termin mesecno",
+         "mark": "P",
+         "name": "premium"
+      },
+      "payment":       {
+         "id": 51,
+         "amount": "2000 dinara",
+         "paymentdate": "10.02.2021"
+      }
+   }
+}</con:request>
+          <con:originalUri>http://localhost/gymCard</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="GymCard Delete" path="/gymCard/{id}" id="13a8dbf5-8457-4989-9520-e943e79c6984">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Delete" id="fa5bbe24-2579-4efc-a813-4142ccaf5b49" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Delete" id="9189ba3e-7f89-44e2-8572-12025db5bb26" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/gymCard/-100</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Workout Get All" path="/workout" id="cd1dbf9c-6441-4380-811e-35f4defdcbf2">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Get All" id="866b1f22-99d6-40a6-8cb7-161d289c7b2f" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get All" id="9cc8776c-f012-4521-bf4e-44ab2f340d57" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/workout</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Workout Get One By Id" path="/workout/{id}" id="b952864b-5141-4ba0-8644-0b369e2aee68">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get One By Id" id="5107ea0d-3913-46d2-8cb3-3184c1992e9f" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/workout/101">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Get One By Id" id="99834d6b-776f-4419-8fea-55bf9613e55d" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/workout/101</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="101" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Workout Get By Date" path="/workoutDate/{date}" id="8ff707f1-32b8-4dcd-bea0-1aa8231ba96b">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>date</con:name>
+          <con:value>date</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>date</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Get By Date" id="72752e37-eafc-464d-a808-7a430e0815cb" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Get By Date" id="27661932-4dae-4219-8dcd-895883b788ab" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/workoutDate/18</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="date" value="18" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Workout Insert" path="/workout" id="443f2554-8724-462a-8f64-f79924d44230">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Insert" id="1e98797e-8903-4036-b1a4-6e898ac7c896" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:wor="http://localhost/workout">wor:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Insert" id="a11e1279-9f0e-4c52-a157-5d9d7e0a28dc" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -101,
+   "date": "date INSERT",
+   "duration": "duration INSERT",
+   "coach":    {
+      "id": 51,
+      "adress": "Brace Ribnikar 71",
+      "contact": "064-8632873",
+      "jmbg": "9326498372125",
+      "name": "Mitar",
+      "surname": "Petrovic"
+   },
+   "member":    {
+      "id": 301,
+      "adress": "Cara Lazara 3",
+      "contact": "067-339842",
+      "jmbg": "2381736219873",
+      "name": "Marko",
+      "status": "student",
+      "surname": "Gavric",
+      "cardCategory":       {
+         "id": 1,
+         "description": "12 termina mesecno",
+         "mark": "B",
+         "name": "basic"
+      },
+      "payment":       {
+         "id": 51,
+         "amount": "2000 dinara",
+         "paymentdate": "10.02.2021"
+      }
+   },
+   "workoutType":    {
+      "id": 51,
+      "title": "aerobik"
+   }
+}</con:request>
+          <con:originalUri>http://localhost/workout</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Workout Update" path="/workout" id="136e3bf8-c522-4f0d-af42-cac0bc84c297">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method Update" id="91d175f9-f0e2-45e3-b9c3-6945bdec1a4b" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:wor="http://localhost/workout">wor:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Update" id="22410b33-89d6-496b-82dd-33d4c285c1a7" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+   "id": -100,
+   "date": "date UPDATE",
+   "duration": "duration UPDATE",
+   "coach":    {
+      "id": 51,
+      "adress": "Brace Ribnikar 71",
+      "contact": "064-8632873",
+      "jmbg": "9326498372125",
+      "name": "Mitar",
+      "surname": "Petrovic"
+   },
+   "member":    {
+      "id": 301,
+      "adress": "Cara Lazara 3",
+      "contact": "067-339842",
+      "jmbg": "2381736219873",
+      "name": "Marko",
+      "status": "student",
+      "surname": "Gavric",
+      "cardCategory":       {
+         "id": 1,
+         "description": "12 termina mesecno",
+         "mark": "B",
+         "name": "basic"
+      },
+      "payment":       {
+         "id": 51,
+         "amount": "2000 dinara",
+         "paymentdate": "10.02.2021"
+      }
+   },
+   "workoutType":    {
+      "id": 51,
+      "title": "aerobik"
+   }
+}</con:request>
+          <con:originalUri>http://localhost/workout</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Workout Delete" path="/workout/{id}" id="137b6771-a805-424d-90ee-01cb70b65770">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method Delete" id="1d3d25e8-22aa-4bbe-9cd4-d34fd13a2ffc" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Delete" id="9dd3ae68-92a6-4277-9404-0b3c604a2ff9" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/workout/-100</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="2ebb6534-93bf-477c-b34e-a792b28254a0" name="GYM TESTSuite">
+    <con:description>TestSuite generated for REST Service [http://localhost:8083]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="40219d5a-cb9b-4427-9cd8-fe0598a8408a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="http://localhost:8083 TestSuite" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Coach Get All" id="fdb89d97-d690-4bee-8106-7b07a534355f">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/coach" methodName="Method Get All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Coach Get All" id="97206076-c76d-4485-8b33-1b640e6b4d56" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/coach</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0ce8ef8d-f078-4f79-a617-a734fb7edaba" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Coach Get One By Id" id="6327e6b4-588e-4a91-a7e5-b57ab8432035">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/coach/{id}" methodName="Method Get One By Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Coach Get One By Id" id="85fec0fd-84a8-46f3-b752-28eff838d575" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/coach/1</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f6230024-2dc8-4196-b750-8e1251271bd1" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Coach Get By Name" id="47c1b3e8-a178-411d-ab2d-1912f8577b84">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/coachName/{name}" methodName="Method Get By Name" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Coach Get By Name" id="eec7e1cf-d3b8-432d-bafa-0a129cf8c324" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/coachName/ne</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="7426752d-e82e-4152-90f0-0e9e46eaa58d" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="name" value="ne" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Coach Insert" id="c44e9b6d-5d7f-4e6c-b208-6e86048486ca">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/coach" methodName="Method Insert" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Coach Insert" id="b5223a77-238b-4479-9037-1c7ec0f22d2e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+"id": -101,
+"adress": "Insert",
+"contact": "063-213761",
+"jmbg": "8777321070211",
+"name": "Insert",
+"surname": "Insert"
+}</con:request>
+            <con:originalUri>http://localhost/coach</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="9a105ff6-c88c-46a9-a542-6e1151efd1f8" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Coach Update" id="b826ae16-dcc6-4afb-86b5-4fa3820e78fe">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/coach" methodName="Method Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Coach Update" id="741cdf34-4ebc-4873-91b1-99514de5b5a7" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+      "id": -100,
+      "adress": "Upadte",
+      "contact": "Up",
+      "jmbg": "UP",
+      "name": "Update",
+      "surname": "Update"
+   }</con:request>
+            <con:originalUri>http://localhost/coach</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="76836a28-8bc9-4c2e-8e06-36a93b59b2e6" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Coach Delete" id="baadc538-e8da-40fc-9bf4-06e296157c15">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/coach/{id}" methodName="Method Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Coach Delete" id="6e97acb5-6b81-4bd5-a43f-fb4dae58a236" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/coach/-100</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f4dbd18b-373f-4c4c-8cc3-e29f6b9d6906" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="WorkoutType Get All" id="d975ff9e-103f-4f4c-87fa-ba0b07212395">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workoutType" methodName="Method Get All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="WorkoutType Get All" id="6ec4a4f1-e23f-45a5-9a0f-59b95d3469b7" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/workoutType</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="4c24b562-c82b-4c2a-b8ab-92f1f61e3326" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="WorkoutType Get One By Id" id="06d2fa45-ed9d-4193-a8d7-ad2eeb2a6011">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workoutType/{id}" methodName="Method Get One By Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="WorkoutType Get One By Id" id="214b8237-eefe-4614-b39c-739ac071227e" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/workoutType/3</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="7ce3a283-8380-4c99-9fd0-000d4474af61" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="101" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Workout Get By Title" id="032051fc-de33-4660-948a-3ad5adff24ae">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workoutTypeTitle/{title}" methodName="Method Get By Title" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Workout Get By Title" id="88a343c5-2c41-4353-8e16-57c324d4e105" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/workoutTypeTitle/dz</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="624795d9-137e-452d-94c4-c9cf715d34ea" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="title" value="dz" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="WorkoutType Insert" id="96c84808-efa1-46e0-919f-25cc8a447165">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workoutType" methodName="Method Insert" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="WorkoutType Insert" id="9b15a61c-1336-456a-b95d-d2d49e8ba5d6" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -101,
+   "title": "dzudo INSERT"
+}</con:request>
+            <con:originalUri>http://localhost/workoutType</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="ce98b299-c29b-4ac3-87dd-d50939077b27" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="WorkoutType Update" id="9bdedd06-6d3e-4071-87ba-97a7972298c6">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workoutType" methodName="Method Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="WorkoutType Update" id="153f085e-4eaa-4d5a-b885-549c8d2a5ec3" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -100,
+   "title": "UPDATE"
+}</con:request>
+            <con:originalUri>http://localhost/workoutType</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="8215fcb9-83dd-4a1f-a956-eff766beb6de" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="WorkoutType Delete" id="4b02584f-df85-4270-bda4-ee2750c9a278">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workoutType/{id}" methodName="Method Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="WorkoutType Delete" id="ec34ac07-ad8d-49d2-b8ed-22aa0c42c990" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/workoutType/id</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="6f5ed4d9-c17c-4e94-a216-e793ca437ffa" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Payment Get All" id="351089b4-c2d2-4cd7-b48c-ccd040693039">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/payment" methodName="Method Get All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Payment Get All" id="490aa5f5-6c05-4f14-ae80-56fc11d0b60a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/payment</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="33073edc-5f00-4beb-82bd-dda420a65db8" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Payment Get One By Id" id="7d702c3f-14ab-422b-9a10-197a34164c3f">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/payment/{id}" methodName="Method Get One By Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Payment Get One By Id" id="5ce5f409-701a-4dcf-b143-fc1b1beea5f0" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/payment/4</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="05f06ad7-6403-46a5-b514-42884bd31e90" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="101" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Payment Get By Amount" id="b7dd7b15-5334-46b9-9ead-2c5fb802b183">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/paymentAmount/{amount}" methodName="Method Get By Amount" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Payment Get By Amount" id="5605a0de-639d-4887-a236-63a8cb94a7f6" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/paymentAmount/3</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="64fdc14a-3cc9-415f-99fb-beaa6e5805b7" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="amount" value="3" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Payment Insert" id="a757b7fe-3b90-4116-80fd-539e785302b0">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/payment" methodName="Method Insert" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Payment Insert" id="f230b05b-d0b9-4051-a996-e0b8529bbd8b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -101,
+   "amount": ".... dinara INSERT",
+   "paymentdate": "datum INSERT"
+}</con:request>
+            <con:originalUri>http://localhost/payment</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="ebf4b208-69df-44d4-8507-0bf4033f82a6" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Payment Update" id="6ff8ea99-4f84-4a80-afcd-0e599c9acf87">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/payment" methodName="Method Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Payment Update" id="86ce1b0a-5ddf-41a8-8a28-5523f5ed06aa" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -100,
+   "amount": "dinara UPDATE",
+   "paymentdate": "datum UPDATE"
+}</con:request>
+            <con:originalUri>http://localhost/payment</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="77eef83f-6324-401b-a448-3318d53e4df5" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Payment Delete" id="643eb2f8-b8b7-4070-8087-ed607ecd8adc">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/payment/{id}" methodName="Method Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Payment Delete" id="78817827-4874-4a68-b917-4d850d58ece3" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/payment/id</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b6ed982e-53b0-404a-85d4-fc4205ddef35" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Employee Get All" id="d57237ae-037b-4201-86b4-c93763323184">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/employee" methodName="Method Get All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Employee Get All" id="09f89e1b-982b-46bf-bf68-f31c0fc51e3d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/employee</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="4b890c29-d53b-4000-8115-17b1e8ec7f38" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Employee Get One By Id" id="329b50e5-45ae-48ef-824f-b35f5c94f66a">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/employee/{id}" methodName="Method Get One By Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Employee Get One By Id" id="f77187d4-35b5-43ac-92e6-571650fa5c84" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/employee/3</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d4c7e26f-b4c0-4f1a-a7ad-2b344e9e5072" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="101" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Employee Get By Name" id="204c692c-c26c-4272-9a29-12de6f3cd879">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/employeeName/{name}" methodName="Method Get By Name" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Employee Get By Name" id="5e1fce48-fa4b-4285-8f10-53874d7c5114" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/employeeName/Darko</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="274aec21-c81f-4b2b-b676-cc23847f697f" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="name" value="Darko" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Employee Insert" id="50402e20-a655-4512-85a9-1b48e6dcf38a">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/employee" methodName="Method Insert" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Employee Insert" id="438dcf63-f6e5-4bb1-991a-0fb1fa83694c" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -101,
+   "contact": "INSERT",
+   "name": "Darko Insert",
+   "password": "darecare Insert",
+   "surname": "Mitorvic Inserrt",
+   "username": "dare.mitrovic INSERT"
+}</con:request>
+            <con:originalUri>http://localhost/employee</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="242e491b-3329-4f7a-83e4-64b70e6f8861" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Employee Update" id="86f8fd0b-b236-4c25-8783-9f2f854aad19">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/employee" methodName="Method Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Employee Update" id="a9a6b6a9-a0c0-4055-9b6c-8137d25361a9" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -100,
+   "contact": "con UPDATE",
+   "name": "na UPDATE",
+   "password": "pass UPDATE",
+   "surname": "sur UPDATE",
+   "username": "usr UPDATE"
+}</con:request>
+            <con:originalUri>http://localhost/employee</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="4e58aaba-e202-4beb-98ea-25d2ddd5b3a1" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Employee Delete" id="a6b4683b-cf12-471f-a1b5-6273da33a5ba">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/employee/{id}" methodName="Method Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Employee Delete" id="842b4365-0d46-4673-9bd0-71e60eda4168" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/employee/-100</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="2fdb5b74-05ab-4319-b78f-0dac159bd938" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="CardCategory Get All" id="4f1ce88c-abdc-47ef-a9c3-c07b60f052bf">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/cardCategory" methodName="Method Get All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="CardCategory Get All" id="82457823-c523-45af-949a-7cd6e95980e4" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/cardCategory</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="2e65e7da-d9b8-40ad-be29-818fd2fe5a84" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="CardCategory Get One By Id" id="08650e2e-0584-404c-97d3-68c293950d67">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/cardCategory/{id}" methodName="Method Get One By Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="CardCategory Get One By Id" id="2d326e40-0c14-4ce9-ad1a-3dc0535ec094" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/cardCategory/101</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c1511f08-1c07-4ce1-a76d-36149d8a04a9" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="101" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="CardCategory Get By Name" id="7a5230bf-3746-4bd6-aa36-345b10d422a9">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/cardCategoryName/{name}" methodName="Method Get By Name" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="CardCategory Get By Name" id="777c3ea2-9e0d-4a87-9343-657c1b51246f" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/cardCategoryName/pr</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1ae9ffcc-5a15-4e26-99df-3731f24b6078" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="name" value="pr" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="CardCategory Insert" id="3db2bb8d-a06c-4a0e-8b64-e13313c3177c">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/cardCategory" methodName="Method Insert" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="CardCategory Insert" id="bb2b5d5c-a9f4-412b-b0ef-42f0057306a7" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -101,
+   "description": "desc INSERT",
+   "mark": "m INSERT",
+   "name": "naem INSERT"
+}</con:request>
+            <con:originalUri>http://localhost/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1bfee18b-5e25-47fe-a090-a95e4cbc0001" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="CardCategory Update" id="9548e1de-bfaf-446f-9d6c-1cc410a99c07">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/cardCategory" methodName="Method Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="CardCategory Update" id="cd2a723f-0e2c-42e4-89a8-a17a1a3d90fd" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -100,
+   "description": "description UPDATE",
+   "mark": "mark UPDATE",
+   "name": "name UPDATE"
+}</con:request>
+            <con:originalUri>http://localhost/cardCategory</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="10e92c02-51ac-4306-ac7d-c3d6f7602872" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="CardCategory Delete" id="702296c8-baed-497d-9086-4c6e5d8ab9f5">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/cardCategory/{id}" methodName="Method Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="CardCategory Delete" id="806c54f6-d3c3-40b5-8152-232cf444cd9a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/cardCategory</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="008c7a21-f520-4b63-a2b8-f1bf311f80e5" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Member Get All" id="8c2479fb-86e5-4275-9a6f-b793c2c46132">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/member" methodName="Method Get All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Member Get All" id="11e20377-e5d6-4b7d-9224-69fb371d0d76" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/member</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c2af8323-42dc-43ee-9f5d-2853343a51bb" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Member Get One By Id" id="65a33134-f47d-458a-9040-7d45bec4d01b">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/member/{id}" methodName="Method Get One By Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Member Get One By Id" id="9dfa4b80-6f83-4c7d-9396-2ad8d9505039" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/member/351</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="8db1bbc7-52ea-46fa-b55f-a23f471cd370" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="351" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Member Get By Name" id="dbfbc8ff-81de-4596-9370-242bdea7dd61">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/memberName/{name}" methodName="Method Get By Name" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Member Get By Name" id="a237229c-f118-4bce-9189-5ddb29ad853a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/memberName/Danilo</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d4e6fad9-d984-4599-990f-d1dda042fcb5" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="name" value="Danilo" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Member Insert" id="5579e8b8-03db-4e6e-a925-8e463d00b76e">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/member" methodName="Method Insert" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Member Insert" id="66ebdb1e-287b-4c3b-a1e4-08f86da87d4e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -101,
+   "adress": "add INSERT",
+   "contact": "con INSERT",
+   "jmbg": "jmbg INSERT",
+   "name": "name INSERT",
+   "status": "status INSERT",
+   "surname": "surname INSERT",
+   "cardCategory":    {
+      "id": 1,
+      "description": "12 termina mesecno",
+      "mark": "B",
+      "name": "basic"
+   },
+   "payment":    {
+      "id": 101,
+      "amount": "1800 dinara",
+      "paymentdate": "01.02.2021"
+   }
+}</con:request>
+            <con:originalUri>http://localhost/member</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="fbcf2655-dff3-463c-9883-2143db82fcc3" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Member Update" id="a58b5d10-2c1e-4fc6-9393-2b8a84657235">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/member" methodName="Method Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Member Update" id="ec24d618-047e-411f-beb9-7581dbe82358" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -100,
+   "adress": "add update",
+   "contact": "con update",
+   "jmbg": "jmbg update",
+   "name": "name update",
+   "status": "status update",
+   "surname": "sur update",
+   "cardCategory":    {
+      "id": 1,
+      "description": "12 termina mesecno",
+      "mark": "B",
+      "name": "basic"
+   },
+   "payment":    {
+      "id": 101,
+      "amount": "1800 dinara",
+      "paymentdate": "01.02.2021"
+   }
+}</con:request>
+            <con:originalUri>http://localhost/member</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d111bb97-5354-4b2f-810c-09da44e8715a" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Member Delete" id="b318add5-9ac8-45fc-9bf1-901ec19bcb2e">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/member/{id}" methodName="Method Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Member Delete" id="3ee31d4e-312b-47e7-be78-c08af8761157" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/member/-100</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="05b84a3c-b5d8-40d9-aba7-b485a909780e" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GymCard Get All" id="853af471-9e41-4d45-9f22-11c6a6976ece">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/gymCard" methodName="Method Get All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GymCard Get All" id="a43ebce2-667e-4f6d-86a7-59dc8ae4ebe9" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/gymCard</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a89d8412-84f7-4f12-a0da-d994245bc09b" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GymCard Get One By Id" id="48776582-e51a-4bee-8f35-913b03b3a92b">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/gymCard/{id}" methodName="Method Get One By Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GymCard Get One By Id" id="b7960aec-381e-4c6d-871d-b4195b4b9a1c" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/gymCard/451</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="604feb80-c5f2-41a5-a796-08d67acc12fd" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="451" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GymCard Get By CardDuration" id="5eecae74-5b0f-4ef6-b831-2cdd8757bafb">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/gymCardDuration/{cardduration}" methodName="Method Get By CardDuration" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GymCard Get By CardDuration" id="1b3b702f-b8de-4937-bb8f-3c9248699033" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/gymCardDuration/mes</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e1884715-7079-40a7-95b0-0017c5e46af2" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="cardduration" value="mes" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GymCard Insert" id="f6e2edcb-d6d9-4ee1-ac35-36146a4eb243">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/gymCard" methodName="Method Insert" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GymCard Insert" id="e260eafe-f1ee-4022-8a3c-04bc9078d382" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -101,
+   "cardduration": "card INSERT",
+   "employee":    {
+      "id": 401,
+      "contact": "065-9874322",
+      "name": "Dunja",
+      "password": "dunja123",
+      "surname": "Lukic",
+      "username": "dunja77lukic"
+   },
+   "member":    {
+      "id": 651,
+      "adress": "Kosovska 23",
+      "contact": "063-1231232",
+      "jmbg": "3291863981234",
+      "name": "Dragana",
+      "status": "penzioner",
+      "surname": "Eric",
+      "cardCategory":       {
+         "id": 101,
+         "description": "31 termin mesecno",
+         "mark": "P",
+         "name": "premium"
+      },
+      "payment":       {
+         "id": 51,
+         "amount": "2000 dinara",
+         "paymentdate": "10.02.2021"
+      }
+   }
+}</con:request>
+            <con:originalUri>http://localhost/gymCard</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0a3a178f-8d1b-4f39-b37a-b34dc1d1bb37" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GymCard Update" id="c4fdfafa-2f05-4aa9-98a0-4aa049433705">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/gymCard" methodName="Method Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GymCard Update" id="7b6aa4b7-4113-426c-9c4a-564838f902e9" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -100,
+   "cardduration": "card UPDATE",
+   "employee":    {
+      "id": 401,
+      "contact": "065-9874322",
+      "name": "Dunja",
+      "password": "dunja123",
+      "surname": "Lukic",
+      "username": "dunja77lukic"
+   },
+   "member":    {
+      "id": 651,
+      "adress": "Kosovska 23",
+      "contact": "063-1231232",
+      "jmbg": "3291863981234",
+      "name": "Dragana",
+      "status": "penzioner",
+      "surname": "Eric",
+      "cardCategory":       {
+         "id": 101,
+         "description": "31 termin mesecno",
+         "mark": "P",
+         "name": "premium"
+      },
+      "payment":       {
+         "id": 51,
+         "amount": "2000 dinara",
+         "paymentdate": "10.02.2021"
+      }
+   }
+}</con:request>
+            <con:originalUri>http://localhost/gymCard</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="ea765503-55bb-4750-82ff-975b9ccb4ee2" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GymCard Delete" id="054d00ca-037e-4f89-a498-c973279802c3">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/gymCard/{id}" methodName="Method Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GymCard Delete" id="9189ba3e-7f89-44e2-8572-12025db5bb26" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/gymCard/-100</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="9d300113-3225-482b-9b1b-7df7eba9a0cb" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Workout Get All" id="fdd8b437-e767-4c22-acd7-7ab20070029c">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workout" methodName="Method Get All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Workout Get All" id="9cc8776c-f012-4521-bf4e-44ab2f340d57" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/workout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="8830e434-8416-4945-bfad-f9f9bdfabfa9" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Workout Get One By Id" id="b0e510f4-8d50-4be7-8015-ee7ee6deca9e">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workout/{id}" methodName="Method Get One By Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Workout Get One By Id" id="99834d6b-776f-4419-8fea-55bf9613e55d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/workout/101</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="92cd5b90-5edf-4141-ae37-aa798738db64" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="101" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Workout Get By Date" id="12c2e7d2-7b49-4d07-80b9-706fe0531577">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workoutDate/{date}" methodName="Method Get By Date" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Workout Get By Date" id="27661932-4dae-4219-8dcd-895883b788ab" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/workoutDate/18</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="3d3e0977-9b71-426b-892a-4f04aafc316e" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="date" value="18" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Workout Insert" id="f0993dc3-adef-459b-b802-5cec2d71762b">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workout" methodName="Method Insert" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Workout Insert" id="a11e1279-9f0e-4c52-a157-5d9d7e0a28dc" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -101,
+   "date": "date INSERT",
+   "duration": "duration INSERT",
+   "coach":    {
+      "id": 51,
+      "adress": "Brace Ribnikar 71",
+      "contact": "064-8632873",
+      "jmbg": "9326498372125",
+      "name": "Mitar",
+      "surname": "Petrovic"
+   },
+   "member":    {
+      "id": 301,
+      "adress": "Cara Lazara 3",
+      "contact": "067-339842",
+      "jmbg": "2381736219873",
+      "name": "Marko",
+      "status": "student",
+      "surname": "Gavric",
+      "cardCategory":       {
+         "id": 1,
+         "description": "12 termina mesecno",
+         "mark": "B",
+         "name": "basic"
+      },
+      "payment":       {
+         "id": 51,
+         "amount": "2000 dinara",
+         "paymentdate": "10.02.2021"
+      }
+   },
+   "workoutType":    {
+      "id": 51,
+      "title": "aerobik"
+   }
+}</con:request>
+            <con:originalUri>http://localhost/workout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="5b121297-1f1f-4e42-abee-2739d4c06dda" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Workout Update" id="2e9ed1c0-233d-4783-8744-0b29f8a48389">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workout" methodName="Method Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Workout Update" id="22410b33-89d6-496b-82dd-33d4c285c1a7" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request>{
+   "id": -100,
+   "date": "date UPDATE",
+   "duration": "duration UPDATE",
+   "coach":    {
+      "id": 51,
+      "adress": "Brace Ribnikar 71",
+      "contact": "064-8632873",
+      "jmbg": "9326498372125",
+      "name": "Mitar",
+      "surname": "Petrovic"
+   },
+   "member":    {
+      "id": 301,
+      "adress": "Cara Lazara 3",
+      "contact": "067-339842",
+      "jmbg": "2381736219873",
+      "name": "Marko",
+      "status": "student",
+      "surname": "Gavric",
+      "cardCategory":       {
+         "id": 1,
+         "description": "12 termina mesecno",
+         "mark": "B",
+         "name": "basic"
+      },
+      "payment":       {
+         "id": 51,
+         "amount": "2000 dinara",
+         "paymentdate": "10.02.2021"
+      }
+   },
+   "workoutType":    {
+      "id": 51,
+      "title": "aerobik"
+   }
+}</con:request>
+            <con:originalUri>http://localhost/workout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="deeb8bd5-d0de-420f-b0b6-016ff5f83b8d" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Workout Delete" id="22c9c92e-12d7-4d89-8257-e0692dd7634d">
+        <con:settings/>
+        <con:config service="http://localhost:8083" resourcePath="/workout/{id}" methodName="Method Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Workout Delete" id="9dd3ae68-92a6-4277-9404-0b3c604a2ff9" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8083</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/workout/-100</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d5b970e7-cea9-46c6-aa0d-df7dd9396d06" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:properties/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+</con:soapui-project>
