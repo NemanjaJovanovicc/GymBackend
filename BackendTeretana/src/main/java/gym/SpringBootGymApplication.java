@@ -3,6 +3,7 @@ package gym;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class SpringBootGymApplication {
 
@@ -11,3 +12,4 @@ public class SpringBootGymApplication {
 	}
 
 }
+//Projekat ERP eksploatacija, održavanje i nadogradnja
